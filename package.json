@@ -1,0 +1,8 @@
+{
+  "name": "stranger-synths",
+  "version": "0.1.0",
+  "description": "Modular synthesizer in React",
+  "main": "index.js",
+  "author": "<averaart@hotmail.com>",
+  "license": "MIT"
+}
