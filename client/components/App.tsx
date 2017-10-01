@@ -16,12 +16,12 @@ export class App extends React.Component<ContextProps, ContextState> {
 
   switchOscillator(frequency:number) {
     if (this.state.source.type == 'none') {
-      let oscSource:Source = { type:'oscillator', frequency: frequency, context: this.props.context }
+      let oscSource:Source = { type:'oscillator', initialFrequency: frequency, context: this.props.context }
       this.setState({...this.state, source: oscSource })
     } else {
       this.setState({...this.state, source: {type: 'none' } })
     }
-    let oscSource:Source = { type:'oscillator', frequency: frequency, context: this.props.context }
+    let oscSource:Source = { type:'oscillator', initialFrequency: frequency, context: this.props.context }
   }
 
   render() {
@@ -31,7 +31,7 @@ export class App extends React.Component<ContextProps, ContextState> {
         <button onClick={() => { this.switchOscillator( 440 )} }>Add</button>
         {
           this.state.source.type == 'oscillator' ?
-            <Oscillator context={this.props.context} frequency={this.state.source.frequency} />
+            <Oscillator context={this.props.context} initialFrequency={this.state.source.initialFrequency} />
           : null
         }
       </div>);
