@@ -19,4 +19,5 @@ declare module 'react-rangeslider' {
     onChange?: (value:number, e:object) => void,
     onChangeComplete?: (e:object) => void
   }
+  export const WORKAROUND = 0;
 }

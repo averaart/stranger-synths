@@ -28,7 +28,7 @@ export class App extends React.Component<ContextProps, ContextState> {
     return (
       <div style={{ textAlign: 'center' }}>
         <h1>Hello World!</h1>
-        <button onClick={() => { this.switchOscillator( 440 )} }>Add</button>
+        <button onClick={() => { this.switchOscillator( 0 )} }>Add</button>
         {
           this.state.source.type == 'oscillator' ?
             <Oscillator context={this.props.context} initialFrequency={this.state.source.initialFrequency} />

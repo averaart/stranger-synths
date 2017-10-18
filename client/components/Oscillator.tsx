@@ -1,14 +1,14 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import { Slider, SliderProps } from "react-rangeslider"
+import { Slider, SliderProps, WORKAROUND } from "react-rangeslider"
 
 export type OscillatorProps = { initialFrequency:number, context:AudioContext }
-export type OscillatorState = { oscillator:OscillatorNode, frequency:number }
+export type OscillatorState = { oscillator:OscillatorNode, frequency:number, workaround:number }
 
 export class Oscillator extends React.Component<OscillatorProps, OscillatorState> {
   constructor(props:OscillatorProps, context:any) {
     super(props, context)
-    this.state = {oscillator: this.props.context.createOscillator(), frequency: props.initialFrequency }
+    this.state = {oscillator: this.props.context.createOscillator(), frequency: props.initialFrequency, workaround: WORKAROUND }
   }
 
   componentWillMount() {

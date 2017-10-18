@@ -10,5 +10,7 @@
   },
   "include": [
     "./client/**/*"
-  ]
+  ],
+  "baseUrl": "client/types",
+  "typeRoots": ["client/types"]
 }
